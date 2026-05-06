@@ -17,7 +17,7 @@ Every time you migrate a cog to Components v2, you end up rewriting the same nav
 from source:
 
 ```bash
-pip install git+https://github.com/ltzmax/maxcogs-utils.git --break-system-packages
+pip install git+https://github.com/ltzmax/maxcogs-utils.git
 ```
 
 ---
@@ -45,8 +45,13 @@ pages = [
     "## 🔧 Tools\n**Lockpick Kit ×1**\n-# +14% success on Museum Relic",
     "## 💰 Loot\n**Painting ×1**\n-# Sell for 20,000–80,000 credits",
 ]
-view = LayoutViewPaginator(pages, ctx)
-view.message = await ctx.send(view=view)
+# You can use standard unicode emojis, or custom bot emojis like "<:name:id>"
+view = LayoutViewPaginator(
+    pages, 
+    ctx, 
+    prev_emoji="⬅️", 
+    next_emoji="➡️"
+)
 ```
 
 #### Component list pages (with link buttons, etc.)
@@ -97,8 +102,9 @@ pages = [
     "## Celtics vs Nets\nScore: 110–105 · Final",
 ]
 labels = ["Heat vs Lakers", "Celtics vs Nets"]
+emojis = ["🔥", "🍀"] # Must match the exact length of pages/labels!
 
-view = SelectPaginator(pages, labels, ctx)
+view = SelectPaginator(pages, labels, ctx, option_emojis=emojis)
 view.message = await ctx.send(view=view)
 ```
 
