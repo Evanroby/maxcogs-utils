@@ -1,6 +1,6 @@
 # dcv2nav
 
-Discord Components v2 navigation views for [Red-DiscordBot](https://github.com/Cog-Creators/Red-DiscordBot) cogs.
+Discord Components v2 navigation views for discord.py apps and [Red-DiscordBot](https://github.com/Cog-Creators/Red-DiscordBot) cogs.
 
 Drop-in paginators that use `discord.ui.LayoutView` with the `◀ 1/N ▶` nav bar style. Works with plain text pages or pre-built component lists so you can have link buttons, separators, and other Components v2 elements on any page.
 
