@@ -27,6 +27,8 @@ pip install git+https://github.com/ltzmax/maxcogs-utils.git
 - Python 3.11+
 - discord.py 2.x (the version shipped with Red-DiscordBot)
 
+These paginators do not require Red-DiscordBot itself to import or use the view classes. If Red's logging helpers are unavailable, the package falls back to the standard Python logging module.
+
 ---
 
 ## Usage
